@@ -1,23 +1,16 @@
 //complete this code
-// class Person {private _name: string;
-//   private _age: number;
+
 class person{
-  constructor(name: string, age: number) {
+  constructor(name, age) {
     this._name = name;
     this._age = age;
   }
 
-  // Getter for name
+ 
   get name() {
     return this._name;
   }
 
-  // Getter for age
-  // get age(): number {
-  //   return this._age;
-  // }
-
-  // Setter for age
   set age(age) {
     this._age = age;
   }
@@ -35,13 +28,13 @@ class Teacher extends Person {
   }
 }
 const person = new Person("John", 25);
-console.log(person.name);  // Output: John
+console.log(person.name);
 
-person.age = 30;  // Using the setter to change the age
-console.log(person.age);  // Output: 30
+person.age = 30;  
+console.log(person.age);  
 
 const student = new Student("Alice", 22);
-student.study();  // Output: Alice is studying
+student.study(); 
 
 const teacher = new Teacher("Bob", 40);
 teacher.teach(); 
