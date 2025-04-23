@@ -3,13 +3,13 @@
 //   private _age: number;
 class person{
   constructor(name: string, age: number) {
-    this.name = name;
-    this.age = age;
+    this._name = name;
+    this._age = age;
   }
 
   // Getter for name
-  get name(): string {
-    return this.name;
+  get name() {
+    return this._name;
   }
 
   // Getter for age
@@ -18,18 +18,22 @@ class person{
   // }
 
   // Setter for age
-  set age(age: number) {
-    this.age = age;
+  set age(age) {
+    this._age = age;
   }
 }
 
-class Student extends Person { study(): void {
+class Student extends Person { 
+	study() {
     console.log(`${this.name} is studying`);
-  }}
+  }
+}
 
-class Teacher extends Person { teach(): void {
+class Teacher extends Person { 
+	teach() {
     console.log(`${this.name} is teaching`);
-  }}
+  }
+}
 const person = new Person("John", 25);
 console.log(person.name);  // Output: John
 
